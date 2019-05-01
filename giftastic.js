@@ -1,5 +1,5 @@
 //giftastic 
-var topics = []
+var topics = ["big lebowski","The Simpsons","Back To the Future","Tron","Fever Pitch","The Quiet Man"]
 
     var button;
     var newTopic = ""; //new topic that will be added via the input field
@@ -88,4 +88,19 @@ var topics = []
             })
 
             //this form takes the value from the imput and adds it into the topics array. the buttonGenerator function is called that takes each topic in the array remakes the buttons on the page. 
+            
+            $(".submit").on("click", function(event){
+                event.preventDefault();
+                console.log("submit");
+                //set inputted value to newTopic
+                newTopic = $("#topic-input").val();
+            //new topic is added 
+        topics.push(newTopic);
+            console.log(topics);
+        //call the function that creates the new button 
+        buttonGenerator();
+        });
+
+        buttonGenerator();
+
             
