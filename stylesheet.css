@@ -63,14 +63,12 @@ btn { margin: 3px;}
 .footer {
     position: absolute;
     bottom: 0;
-    width: 100;
+    width: 100px;
     height: 60px;
     text-align:center;
     background-color: black;
 }
-.credits {
-    font-size: 8em;
-}
+
 .clear {
     clear:both;
 }

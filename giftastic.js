@@ -91,7 +91,7 @@ var topics = ["big lebowski","The Simpsons","Back To the Future","Tron","Fever P
             
             $(".submit").on("click", function(event){
                 event.preventDefault();
-                console.log("submit");
+                //console.log("submit");
                 //set inputted value to newTopic
                 newTopic = $("#topic-input").val();
             //new topic is added 
