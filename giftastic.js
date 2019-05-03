@@ -43,15 +43,18 @@ var topics = ["big lebowski","The Simpsons","Back To the Future","Tron","Fever P
                             //under every gif,display rating 
                             var p = $("<p>");
                             p.text(results[i].rating);
-                            var p = $("<p>").text("Rating: " + results[i].rating);
+                            var p = $("<p>").text("Rating:" + results[i].rating);
                             //add a css style to create colored borders around the gifs. 
-                            var topicImage = $("<img>").addClass("OrangeBorder");
+                            var topicImage = $("<img>").addClass("orangeBorder");
 
                                 //add states of animate and still which will be toggled
 
                                 topicImage.attr("src", results[i]. images.fixed_height_still/irl);
 
                                 topicImage.attr("data-still",results[i].images.fixed_height_still.url);
+
+                                topicImage.attr("data-animate", results[i].images.fixed_height.url)
+                                topicImage.attr("data-state", "still")
 
                                 topicImage.addClass("gif");
 
@@ -96,7 +99,7 @@ var topics = ["big lebowski","The Simpsons","Back To the Future","Tron","Fever P
                 newTopic = $("#topic-input").val();
             //new topic is added 
         topics.push(newTopic);
-            console.log(topics);
+            //console.log(topics);
         //call the function that creates the new button 
         buttonGenerator();
         });
