@@ -6,7 +6,7 @@ html{
 body {
     background-color:#262626;
     /* margin bottom by foorter height */
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 
 }
 p {
@@ -43,7 +43,7 @@ btn { margin: 3px;}
     flex-wrap: wrap;
     /* flex-direction: column; */
     flex-wrap: wrap;
-    height: 100vw;
+   /* height: 100vw; */
     align-items: stretch;
     justify-content: space-around;
     margin-bottom: 50px;
@@ -60,14 +60,22 @@ btn { margin: 3px;}
     border:1px solid #646464;
 }
 
+.instructions {
+    display: none;
+    color: orange;
+}
+
 .footer {
     position: absolute;
     bottom: 0;
-    width: 50px;
-    height:30px;
+    width: 100%;
+    height: 60px;
     text-align:center;
     background-color: black;
     color:rgb(10, 184, 242);
+}
+\.credits {
+    font: 8em;
 }
 
 .clear {
