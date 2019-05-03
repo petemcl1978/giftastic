@@ -1,5 +1,5 @@
 //giftastic 
-var topics = ["big lebowski","The Simpsons","Back To the Future","Tron","Fever Pitch","The Quiet Man"]
+var topics = ["big lebowski","The Simpsons","Back To the Future","Tron","Fever Pitch","The Quiet Man"];
 
     var button;
     var newTopic = ""; //new topic that will be added via the input field
@@ -12,7 +12,7 @@ var topics = ["big lebowski","The Simpsons","Back To the Future","Tron","Fever P
         //loops through the array and creates buttons
             for(i = 0; i <topics.length; i++) {
                 button = $("<button type=" + "button" + ">" + topics[i] + " </button").addClass("btn btn-warning").attr("data",topics[i]);
-                $("#bottonArea").append(button);
+                $("#buttonArea").append(button);
             };
             }
     
@@ -31,11 +31,11 @@ var topics = ["big lebowski","The Simpsons","Back To the Future","Tron","Fever P
                      method: "GET"
                     
                     }).done(function(response){
-                        console.log(response);
+                        //console.log(response);
 
                         var results = response.data;
 
-                        for (var i = o; i < results.length; i++) {
+                        for (var i = 0; i < results.length; i++) {
                             //a div is greated to hold a gif of any topic
 
                             var topicDiv =$("<div>");
