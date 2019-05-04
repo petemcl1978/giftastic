@@ -10,7 +10,7 @@ var movies = ["The Big Lebowski","The Simpsons","Back To the Future","Tron","Fev
         //the previous div elements are emptied
         $("#buttonArea").empty();
         //loops through the array and creates buttons
-            for(var i = 0; i <movies.length; i++) {
+            for(i = 0; i <movies.length; i++) {
                 button = $("<button type="+ "button"+ ">"+ movies[i] + "</button>").addClass("btn btn-warning").attr("data",movies[i]);
                 $("#buttonArea").append(button);
                 
@@ -25,7 +25,7 @@ var movies = ["The Big Lebowski","The Simpsons","Back To the Future","Tron","Fev
             //the user clicks on a generated orange button, which generates 10 static,non animated gif images from the GIPPHY API and places them on the page
 
             $("#buttonArea").on("click", ".btn", function(){
-                var thing = $(this).attr("data");
+                var movies = $(this).attr("data");
                 var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=BZP8gZt1cDB38GxXRpGaKbo2O2RKZHUQ&q="+ movies +"&limit=10&offset=0&rating=G&lang=en"
                  $(".instructions").show();
 
