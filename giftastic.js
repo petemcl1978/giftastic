@@ -1,5 +1,5 @@
 //giftastic 
-var topics = ["big lebowski","The Simpsons","Back To the Future","Tron","Fever Pitch","The Quiet Man"];
+var movies = ["big lebowski","The Simpsons","Back To the Future","Tron","Fever Pitch","The Quiet Man"];
 
     var button;
     var newTopic = ""; //new topic that will be added via the input field
@@ -10,19 +10,23 @@ var topics = ["big lebowski","The Simpsons","Back To the Future","Tron","Fever P
         //the previous div elements are emptied
         $("#buttonArea").empty();
         //loops through the array and creates buttons
-            for(i = 0; i <topics.length; i++) {
-                button = $("<button type=" + "button" + ">" + topics[i] + " </button").addClass("btn btn-warning").attr("data",topics[i]);
+            for(var i = 0; i <movies.length; i++) {
+                button = $("<button type="+ "button"+ ">"+ movies[i] + "</button>").addClass("btn btn-warning").attr("data",movies[i]);
                 $("#buttonArea").append(button);
-            };
+                
+                };
             }
+
+
+            
+    
     
 
             //the user clicks on a generated orange button, which generates 10 static,non animated gif images from the GIPPHY API and places them on the page
 
             $("#buttonArea").on("click", ".btn", function(){
                 var thing = $(this).attr("data");
-                var queryURL =
-                 "https://api.giphy.com/v1/gifs/search?api_key=BZP8gZt1cDB38GxXRpGaKbo2O2RKZHUQ&q=&limit=10&offset=0&rating=G&lang=en";
+                var queryURL ="https://api.giphy.com/v1/gifs/search?q=" + movies +"&api_key=BZP8gZt1cDB38GxXRpGaKbo2O2RKZHUQ&q=movies&limit=10&offset=0&rating=G&lang=en"
 
                  $(".instructions").show();
 
@@ -49,7 +53,7 @@ var topics = ["big lebowski","The Simpsons","Back To the Future","Tron","Fever P
 
                                 //add states of animate and still which will be toggled
 
-                                topicImage.attr("src", results[i]. images.fixed_height_still/irl);
+                                topicImage.attr("src", results[i].images.fixed_height_still.url);
 
                                 topicImage.attr("data-still",results[i].images.fixed_height_still.url);
 
@@ -98,12 +102,9 @@ var topics = ["big lebowski","The Simpsons","Back To the Future","Tron","Fever P
                 //set inputted value to newTopic
                 newTopic = $("#topic-input").val();
             //new topic is added 
-        topics.push(newTopic);
+        movies.push(newTopic);
             //console.log(topics);
         //call the function that creates the new button 
         buttonGenerator();
         });
 
-        buttonGenerator();
-
-            
