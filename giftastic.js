@@ -1,5 +1,5 @@
-//giftastic 
-var movies = ["The Big Lebowski","The Simpsons","Back To the Future","Tron","Fever Pitch","The Quiet Man"];
+//
+var movies = ["The Big Lebowski","The Simpsons","Back To the Future","Tron","Fever Pitch","The Quiet Man","Harry and the Hendersons","SpaceBalls","National Lampoon's Vacation","Animal House","Groundhog Day","Happy Gilmore","Billy Madison","This Is Spinal Tap"];
 
     var button;
     var newTopic = ""; //new topic that will be added via the input field
@@ -13,16 +13,10 @@ var movies = ["The Big Lebowski","The Simpsons","Back To the Future","Tron","Fev
             for(i = 0; i <movies.length; i++) {
                 button = $("<button type="+ "button"+ ">"+ movies[i] + "</button>").addClass("btn btn-warning").attr("data",movies[i]);
                 $("#buttonArea").append(button);
-                
-                };
             }
-
-
+                };
             
-    
-    
-
-            //the user clicks on a generated orange button, which generates 10 static,non animated gif images from the GIPPHY API and places them on the page
+             //the user clicks on a generated orange button, which generates 10 static,non animated gif images from the GIPPHY API and places them on the page
 
             $("#buttonArea").on("click", ".btn", function(){
                 var movies = $(this).attr("data");
