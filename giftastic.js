@@ -1,5 +1,5 @@
 //giftastic 
-var movies = ["big lebowski","The Simpsons","Back To the Future","Tron","Fever Pitch","The Quiet Man"];
+var movies = ["The Big Lebowski","The Simpsons","Back To the Future","Tron","Fever Pitch","The Quiet Man"];
 
     var button;
     var newTopic = ""; //new topic that will be added via the input field
@@ -26,8 +26,7 @@ var movies = ["big lebowski","The Simpsons","Back To the Future","Tron","Fever P
 
             $("#buttonArea").on("click", ".btn", function(){
                 var thing = $(this).attr("data");
-                var queryURL ="https://api.giphy.com/v1/gifs/search?api_key=BZP8gZt1cDB38GxXRpGaKbo2O2RKZHUQ&q=movies&limit=10&offset=0&rating=G&lang=en";
-
+                var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=BZP8gZt1cDB38GxXRpGaKbo2O2RKZHUQ&q="+ movies +"&limit=10&offset=0&rating=G&lang=en"
                  $(".instructions").show();
 
                  $.ajax({
