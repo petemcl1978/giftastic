@@ -11,7 +11,9 @@ var movies = ["The Big Lebowski","The Simpsons","Back To the Future","Tron","Fev
         $("#buttonArea").empty();
         //loops through the array and creates buttons
             for(i = 0; i <movies.length; i++) {
-                button = $("<button type="+ "button"+ ">"+ movies[i] + "</button>").addClass("btn btn-warning").attr("data",movies[i]);
+                button = $("<button type="+ "button"+ ">"+ movies[i] + "</button>")
+                .addClass("btn btn-warning")
+                .attr("data",movies[i]);
                 $("#buttonArea").append(button);
             }
                 };
@@ -100,4 +102,6 @@ var movies = ["The Big Lebowski","The Simpsons","Back To the Future","Tron","Fev
         //call the function that creates the new button 
         buttonGenerator();
         });
+
+        buttonGenerator();
 
